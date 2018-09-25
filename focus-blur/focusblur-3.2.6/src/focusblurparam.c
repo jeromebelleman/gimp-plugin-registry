@@ -118,7 +118,7 @@ focusblur_param_set (FblurParam         *param,
         CLAMP (gimp_param[8].data.d_float, 0.0, 100.0);
 
       /* These parameter is not used with non-interactive */
-      param->store.enable_depth_precedence  = FALSE;
+      param->store.enable_depth_precedence  = TRUE;
       param->store.model_fill               = 0.0;
       param->store.model_softness           = 0.0;
       param->store.shine_level              = 100.0;
