@@ -99,7 +99,7 @@ focusblur_param_set (FblurParam         *param,
   g_assert (param);
   g_assert (gimp_param);
 
-  if (gimp_nparams == 9)
+  if (gimp_nparams == 10)
     {
       param->store.model_type =
         CLAMP (gimp_param[3].data.d_int32,
@@ -116,9 +116,9 @@ focusblur_param_set (FblurParam         *param,
         CLAMP (gimp_param[7].data.d_float, 0.0, FBLUR_RADIUS_MAX);
       param->store.shine_threshold =
         CLAMP (gimp_param[8].data.d_float, 0.0, 100.0);
+      param->store.enable_depth_precedence = gimp_param[9].data.d_int8;
 
       /* These parameter is not used with non-interactive */
-      param->store.enable_depth_precedence  = TRUE;
       param->store.model_fill               = 0.0;
       param->store.model_softness           = 0.0;
       param->store.shine_level              = 100.0;

@@ -72,6 +72,7 @@ query (void)
     {GIMP_PDB_INT32,    "map_id",     "Depth map drawable id: (drawable_ID or -1 unused)"},
     {GIMP_PDB_FLOAT,    "s_radius",   "Radius for shining: (0.0 <= shine, 0 unused, -1 full shined)"},
     {GIMP_PDB_FLOAT,    "threshold",  "Threshold for shining: (0.0 <= threshold <= 100.0 in %, 0 unused)"},
+    {GIMP_PDB_INT8,     "precedence", "Depth with precedence: (0:False, otherwise:True)"},
   };
 
   gimp_install_procedure (PLUG_IN_PROC,
